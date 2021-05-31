@@ -1,6 +1,8 @@
 body{
     margin:0;
     padding:0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 h1{
@@ -37,90 +39,100 @@ p{
 }
 
 .main_head{
-    height: 100%;
-    background-image:url("assets/main_img.jpg");
-    background-position: 50%;
+    background-image: url("assets/main_img.jpg");
+    height: 780px;
+
+    h1{
+        font-size: 50px;
+    }
+
+    h4{
+        font-size: 22px;
+    }
 }
 
-.main_head_content{
-    display: flex;
-    flex-direction: column;
-    word-break: break-word;
-    align-items: center;
+.head_logo{
+    margin-top: 45px;
+}
+.head_sub_content{
+    position: relative;
+    border:1px solid rgba(68, 0, 255, 0);
+}
+.blue_bg{
+    position: absolute;
+    left:0;
+    padding: 0;
+    border:1px solid rgba(34, 139, 34, 0);
 
     img{
-        margin: 10vh 0 0 0;
+        max-width: 85%;   
     }
 }
 
-@media screen and (min-width: 768px) {
-    .main_head_content img{
-        align-self: flex-start;
-    }
+.head_head_and_button{
+    position: relative;
+    z-index: 10;
+    margin-top: 25vh;
+    margin-left: 12%;
+    border:1px solid rgba(255, 235, 205, 0);
 
-.blue_bg{
-    background-size: cover;
-    background-image: url("assets/banner-text-bg.svg");
-    width: 600px;
-    height: 550px;
-    align-items: flex-start;
-    padding: 0;
-
-    h1{
-        color: #fff;
-        letter-spacing: 0.67px;
-        line-height: 48px;
-        margin-top: 60px;
-    }
-
-    h4{
-        color: #d9dae4;
-        letter-spacing: 0.71px;
-        line-height: 25px;
-        margin: 40px 0 35px 0;
+    h4 {
+        margin: 25px 0 35px 0;
     }
 }
 
-.blue_bg >*{
-    align-self: flex-start;
-}
 
-}
-
-.blue_bg{
-    text-align: center;
-    padding: 5vw;
-    display: felx;
-    flex-direction: column;
-    align-items: center;
-
-    h1{
-        color: #fff;
-        letter-spacing: 0.67px;
-        line-height: 48px;
-        margin-top: 60px;
+@media (max-width: 992px ) and (min-width: 768px){
+    .main_head{
+        background-position: 50%;
+        height: 780px;
     }
 
-    h4{
-        color: #d9dae4;
-        letter-spacing: 0.71px;
-        line-height: 25px;
-        margin: 40px 0 35px 0;
+    .blue_bg{
+    
+        img{
+            max-width: 100%;   
+        }
+    }
+
+    .head_head_and_button{
+        margin-top: 200px;
     }
 }
+@media screen and (max-width: 768px){
+    .blue_bg{
+        display: none;
+    }
 
+    .main_head{
+        background-position: 50%;
+    }
+
+    .head_logo{
+        display: flex;
+        justify-content: center;
+    }
+    .head_head_and_button{
+        margin-top: 15vh;
+        margin-left: 0;
+        text-align: center;
+
+        .button_apply_now{
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}
 .button_apply_now{
     background-image: url("assets/apply-now.svg");
     background-repeat: no-repeat;
-    background-position: 80% 55%;
-    width: 250px;
-    padding: 0.8em 2.5em 0.8em 0;
-    border-radius: 2em;
-    font-size: 20px;
-    font-weight: 500;
-    color:rgb(19, 19, 19);
+    background-position: 80% 50% ;
     background-color: whitesmoke;
-    text-align: center;
+    border-radius: 35px;
+    width: fit-content;
+    font-size: 18px;
+    padding: 15px 90px 15px 40px;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px){
@@ -128,6 +140,13 @@ p{
         text-align: center;
     }
 
+    .network_img_1{
+        background-image: url("assets/right\ network.svg");
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    
 }
 
 .text_center_us{
@@ -143,14 +162,21 @@ p{
 }
 
 .margin_auto{
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 
+.does_it{
+    position: absolute;
+    margin: 0 0 20% 0;
+    max-width: 100%;
+    z-index: -1;
+}
 .network_reward{
-    padding: 2vw 0;
+    padding-bottom:  90px;
 
     .row{
-        margin:5vw 0;
+        padding-top: 90px;
     }
 
     div div{
@@ -158,6 +184,9 @@ p{
     }
 }
 
+.how_it_work{
+    padding: 6% 0 0 0;
+}
 .steps{
     margin: 6vw 0;
 }
@@ -166,7 +195,7 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
+    cursor: pointer;
     img{
         position: absolute;
     }
@@ -204,11 +233,15 @@ p{
 
 .contact_us{
     margin: 15vh 0  10vh 0;
+    padding:0 60px;
     background-image:url("assets/contact-form-bg.jpg");
     background-position: 50% 50%;
     height: 100vh;
 }
 
+.input_name, .input_email, .input_linkdin{
+    position: absolute;
+}
 @media screen and (max-height:700px) {
     .contact_us{
         min-height: 700px;
@@ -217,11 +250,11 @@ p{
 }
 
 .contact_us_header{
-    margin-top: 7vh;
+    margin-top: 70px;
 }
 
 .contact_us_header >*{
-    margin-bottom: 0.4em;
+    margin-bottom: 1em;
 }
 
 .faq{
@@ -251,25 +284,36 @@ p{
 
 .input_group{
     max-width: 530px;
-    margin: 0 auto;
+    margin: 25px auto;
+
+  
 }
 
 .input_group_sub{
     max-width: 550px;
-    margin: 35px auto ;
+    margin: 5px auto ;
 }
+
 .contact_input{
     width: 100%;
-    margin: 5vh 0 0  0;
+    border-bottom: 2px solid rgb(226, 226, 226);
 
     input,textarea{
+        margin-left: 15px;
         background:none;
         outline: none;
         border:none;
-        border-bottom: 2px solid whitesmoke;
         color:whitesmoke;
         font-size:20px;
     }
+
+    &.bot_mar{
+        margin: 0 0 60px  0;
+    }
+}
+
+.contact_name{
+    border-bottom: 2px solid rgb(47, 47, 196); 
 }
 
 .contact_input input{
@@ -283,6 +327,65 @@ input:focus, textarea:focus{
     border: none;
 }
 
-.contact_input input:focus{
-    border-bottom: 2px solid rgb(73, 73, 235);
+input:hover, textarea:hover{
+    cursor: pointer;
+}
+
+
+
+.b{
+    margin-top: 40px;
+}
+
+@media (max-width: 805px) and (min-width:543px){
+    .contact_us_header h1{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 540px) and (min-width:475px){
+
+    .b{
+        margin-top: 5px;
+    }
+
+    .contact_input{
+           
+        &.bot_mar{
+            margin: 0 0 40px  0;
+        }
+    }
+
+}
+
+@media (max-width: 475px) {
+    .contact_us{
+        h1{
+            font-size: 28px;
+        }
+
+        h3{
+            font-size: 18px;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        padding: 5%;
+    }
+
+    .contact_input{
+        &.bot_mar{
+            margin: 0 0 40px 0;
+        }
+    }
+
+    .input_group_sub{
+        max-width: 100%;
+    }
+
+    .main_head{
+        height: 100vh;
+    }
 }
