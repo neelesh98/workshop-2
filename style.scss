@@ -73,7 +73,7 @@ p{
     position: relative;
     z-index: 10;
     margin-top: 25vh;
-    margin-left: 12%;
+    margin-left: 10%;
     border:1px solid rgba(255, 235, 205, 0);
 
     h4 {
@@ -135,6 +135,19 @@ p{
     cursor: pointer;
 }
 
+.button_hover{
+    :hover{
+        background-color: #FF6E43;
+        color: white;
+        background-image: url("assets/apply-now-2.svg");
+        background-repeat: no-repeat;
+
+    }
+
+    strong :hover{
+        background-image: none;
+    }
+}
 @media screen and (min-width: 768px){
     .text_center{
         text-align: center;
@@ -161,6 +174,9 @@ p{
     color: rgb(175,175,175);
 }
 
+.color_black{
+    color: #242635;
+}
 .margin_auto{
     margin-right: auto;
     margin-left: auto;
@@ -184,8 +200,15 @@ p{
     }
 }
 
+.does_it_work_bg{
+    background-image: url("assets/does it Work br.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y:top;
+    background-size: cover;
+}
 .how_it_work{
-    padding: 6% 0 0 0;
+    padding-top: 6%;
 }
 .steps{
     margin: 6vw 0;
@@ -194,12 +217,17 @@ p{
 .steps_sub{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start;                    
     cursor: pointer;
     img{
         position: absolute;
     }
+    
+    
+}
 
+.steps_hover{
+    display: flex;
     :hover{
         background: #FF6E43;
         color: white;
@@ -209,6 +237,7 @@ p{
     margin-top: 90px;
     padding: 10px;
     border-radius: 5px;
+    min-height: 180px;
 }
 
 .perks{
@@ -239,12 +268,19 @@ p{
     height: 100vh;
 }
 
-.input_name, .input_email, .input_linkdin{
+.input_name, .input_email, .input_linkdin {
     position: absolute;
+    display: inline-block;
 }
+
+.input_name_2, .input_email_2, .input_linkdin_2{
+    position: absolute;
+    display: inline-block;
+}
+
 @media screen and (max-height:700px) {
     .contact_us{
-        min-height: 700px;
+        min-height: 800px;
     }
     
 }
@@ -312,9 +348,7 @@ p{
     }
 }
 
-.contact_name{
-    border-bottom: 2px solid rgb(47, 47, 196); 
-}
+
 
 .contact_input input{
     width:100%;
@@ -322,9 +356,13 @@ p{
     display: flex;
 }
 
-input:focus, textarea:focus{
+.contact_name input:focus, textarea:focus{
     outline: none;
-    border: none;
+    border-bottom: 3px solid rgb(45, 45, 255);
+    padding-left: 30px;
+    transform: translate(-15px, 3px);
+
+    
 }
 
 input:hover, textarea:hover{
@@ -389,3 +427,78 @@ input:hover, textarea:hover{
         height: 100vh;
     }
 }
+
+.footer_foot{
+    padding: 35px 0;
+    color: #5F5F5F;
+    font-size: 16px;
+    font-weight:200;
+
+    strong{
+        color: #FF6E43;
+    }
+}
+
+.footer_neo, .footer_terms_of_service{
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .footer_neo{
+        text-align: left;
+    }
+    
+    .footer_terms_of_service{
+        text-align: right;
+    }
+}
+
+button, button :enabled{
+    border:none;
+    outline: none;
+}
+.accordion {
+    background-color: rgb(255, 255, 255);
+    color: #444;
+    cursor: pointer;
+    padding: 0 10px;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid silver;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+  }
+  
+  .accordion:hover {
+    background-color: #ccc; 
+  }
+
+  .active{
+      border: none;
+      outline: none;
+     .faq_down_arrow{
+         display: none;
+     }
+
+     .faq_up_arrow{
+         display: block;
+     }
+  }
+  
+  .panel {
+    padding:  5px 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    color: #FF6E43;
+  }
+
+
+
