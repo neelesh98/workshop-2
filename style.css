@@ -380,6 +380,27 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 20px;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+::-ms-input-placeholder {
+  color: white;
+  font-size: 18px;
+}
+
+::placeholder {
+  color: white;
+  font-size: 18px;
 }
 
 .contact_name input:focus, textarea:focus {
@@ -515,5 +536,28 @@ button, button :focus {
   background-color: white;
   overflow: hidden;
   color: #FF6E43;
+}
+
+.accordion_col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accordion_col .col .col-lg-6 {
+  min-width: 100%;
+}
+
+.accordion_col_2 {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .accordion_col {
+    display: none;
+  }
+  .accordion_col_2 {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */

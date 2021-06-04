@@ -364,6 +364,13 @@ p{
     width:100%;
     height: 40px;
     display: flex;
+    padding-bottom: 20px;
+
+}
+
+::placeholder{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
 }
 
 .contact_name input:focus, textarea:focus{
@@ -513,4 +520,27 @@ button, button :focus{
   }
 
 
+.accordion_col{
+    display: flex;   
 
+   .col {
+
+     .col-lg-6{
+         min-width: 100%;
+     }
+    }
+}
+
+.accordion_col_2{
+    display: none;
+}
+
+@media (max-width: 992px){
+    .accordion_col{
+        display: none;
+    }
+
+    .accordion_col_2{
+        display: block;
+    }
+}
