@@ -32,10 +32,11 @@ p {
 .b_weight {
   font-weight: 700;
   margin: 0 0 0.5em 0;
+  color: #242635;
 }
 
 .l_weight {
-  font-weight: 500;
+  font-weight: 600;
   color: #3f3f3f;
 }
 
@@ -69,7 +70,7 @@ p {
 }
 
 .blue_bg img {
-  max-width: 85%;
+  max-width: 600px;
 }
 
 .head_head_and_button {
@@ -77,11 +78,15 @@ p {
   z-index: 10;
   margin-top: 25vh;
   margin-left: 10%;
-  border: 1px solid rgba(255, 235, 205, 0);
+  border: 1px solid rgba(158, 129, 85, 0);
 }
 
 .head_head_and_button h4 {
   margin: 25px 0 35px 0;
+}
+
+.head_head_and_button h1 {
+  font-weight: 600;
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
@@ -168,7 +173,7 @@ p {
 }
 
 .color_grey_white {
-  color: #afafaf;
+  color: #D9DAE4;
 }
 
 .color_black {
@@ -242,6 +247,11 @@ p {
 .steps_hover :hover {
   background: #FF6E43;
   color: white;
+}
+
+.trans_duration {
+  -webkit-transition-duration: 7000ms;
+          transition-duration: 7000ms;
 }
 
 .steps_content {
@@ -375,7 +385,7 @@ p {
 .contact_name input:focus, textarea:focus {
   outline: none;
   border-bottom: 3px solid #2d2dff;
-  padding-left: 30px;
+  padding-left: 25px;
   -webkit-transform: translate(-15px, 3px);
           transform: translate(-15px, 3px);
 }
@@ -430,7 +440,9 @@ input:hover, textarea:hover {
 .footer_foot {
   padding: 35px 0;
   color: #5F5F5F;
+  line-height: 19px;
   font-size: 16px;
+  font-weight: 200;
   font-weight: 200;
 }
 
@@ -451,9 +463,9 @@ input:hover, textarea:hover {
   }
 }
 
-button, button :enabled {
+button, button :focus {
   border: none;
-  outline: none;
+  outline: none !important;
 }
 
 .accordion {

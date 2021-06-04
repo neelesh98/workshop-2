@@ -31,10 +31,11 @@ p{
 .b_weight{
     font-weight: 700;
     margin:0 0 0.5em 0;
+    color: #242635;
 }
 
 .l_weight{
-    font-weight: 500;
+    font-weight: 600;
     color:rgb(63, 63, 63);
 }
 
@@ -65,7 +66,7 @@ p{
     border:1px solid rgba(34, 139, 34, 0);
 
     img{
-        max-width: 85%;   
+        max-width: 600px;   
     }
 }
 
@@ -74,10 +75,14 @@ p{
     z-index: 10;
     margin-top: 25vh;
     margin-left: 10%;
-    border:1px solid rgba(255, 235, 205, 0);
+    border:1px solid rgba(158, 129, 85, 0);
 
     h4 {
         margin: 25px 0 35px 0;
+    }
+
+    h1{
+        font-weight: 600;
     }
 }
 
@@ -171,7 +176,7 @@ p{
 }
 
 .color_grey_white{
-    color: rgb(175,175,175);
+    color: #D9DAE4;
 }
 
 .color_black{
@@ -228,10 +233,15 @@ p{
 
 .steps_hover{
     display: flex;
+    
     :hover{
         background: #FF6E43;
         color: white;
     }
+}
+
+.trans_duration{
+    transition-duration: 7000ms;
 }
 .steps_content{
     margin-top: 90px;
@@ -359,7 +369,7 @@ p{
 .contact_name input:focus, textarea:focus{
     outline: none;
     border-bottom: 3px solid rgb(45, 45, 255);
-    padding-left: 30px;
+    padding-left: 25px;
     transform: translate(-15px, 3px);
 
     
@@ -431,8 +441,10 @@ input:hover, textarea:hover{
 .footer_foot{
     padding: 35px 0;
     color: #5F5F5F;
+    line-height: 19px;
     font-size: 16px;
     font-weight:200;
+    font-weight: 200;
 
     strong{
         color: #FF6E43;
@@ -453,9 +465,9 @@ input:hover, textarea:hover{
     }
 }
 
-button, button :enabled{
+button, button :focus{
     border:none;
-    outline: none;
+    outline: none !important; 
 }
 .accordion {
     background-color: rgb(255, 255, 255);
