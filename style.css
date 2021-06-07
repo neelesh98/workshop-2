@@ -89,6 +89,15 @@ p {
   font-weight: 600;
 }
 
+@media (max-width: 1200px) and (min-width: 992px) {
+  .head_head_and_button h4 {
+    margin: 25px 0 35px 0;
+  }
+  .head_head_and_button h1 {
+    font-size: 45px;
+  }
+}
+
 @media (max-width: 992px) and (min-width: 768px) {
   .main_head {
     background-position: 50%;
@@ -128,10 +137,14 @@ p {
   }
 }
 
+.orange_arrow, .white_arrow {
+  position: absolute;
+  top: 35%;
+  left: 160px;
+}
+
 .button_apply_now {
-  background-image: url("assets/apply-now.svg");
-  background-repeat: no-repeat;
-  background-position: 80% 50%;
+  position: relative;
   background-color: whitesmoke;
   border-radius: 35px;
   width: -webkit-fit-content;
@@ -145,12 +158,10 @@ p {
 .button_hover :hover {
   background-color: #FF6E43;
   color: white;
-  background-image: url("assets/apply-now-2.svg");
-  background-repeat: no-repeat;
 }
 
-.button_hover strong :hover {
-  background-image: none;
+.button_hover :hover .orange_arrow {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -380,7 +391,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
+  padding-left: 18px;
 }
 
 ::-webkit-input-placeholder {
@@ -406,9 +418,9 @@ p {
 .contact_name input:focus, textarea:focus {
   outline: none;
   border-bottom: 3px solid #2d2dff;
-  padding-left: 25px;
   -webkit-transform: translate(-15px, 3px);
           transform: translate(-15px, 3px);
+  padding-left: 33px;
 }
 
 input:hover, textarea:hover {
